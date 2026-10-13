@@ -1,0 +1,42 @@
+{
+  "name": "amaya-paywall",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.15.0 <25"
+  },
+  "scripts": {
+    "dev": "nuxt dev --host 127.0.0.1",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build",
+    "visual:compare": "node scripts/compare-design.mjs"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.8",
+    "h3": "^1.15.11",
+    "nuxt": "4.6.1",
+    "ofetch": "^1.5.1"
+  },
+  "overrides": {
+    "simple-git": "4.0.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.0",
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.19.2",
+    "eslint": "^9.39.0",
+    "eslint-plugin-vue": "^10.5.0",
+    "pixelmatch": "^7.1.0",
+    "pngjs": "^7.0.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.0",
+    "vitest": "^5.0.4",
+    "vue-tsc": "^3.1.0"
+  }
+}

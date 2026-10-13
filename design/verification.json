@@ -1,0 +1,10 @@
+{
+  "referencePath": "design/figma-ready.png",
+  "screenshotPath": "test-results/paywall-ready.png",
+  "width": 390,
+  "height": 844,
+  "threshold": 0.1,
+  "mismatchPixels": 3101,
+  "mismatchRatio": 0.009420950297727548,
+  "passed": true
+}

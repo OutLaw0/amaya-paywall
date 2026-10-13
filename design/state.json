@@ -1,0 +1,13 @@
+{
+  "fileKey": "w5pacUQ9UkczKkJRdzQLMS",
+  "url": "https://www.figma.com/design/w5pacUQ9UkczKkJRdzQLMS?node-id=2-25",
+  "pageId": "0:1",
+  "screens": { "ready": "2:25", "loading": "3:20", "error": "3:87", "success": "3:154" },
+  "components": { "offers": "2:83", "purchaseButton": "2:105" },
+  "illustration": "2:30",
+  "collections": ["VariableCollectionId:2:2", "VariableCollectionId:2:3"],
+  "viewport": { "width": 390, "height": 844 },
+  "font": "Inter",
+  "pixelmatchThreshold": 0.1,
+  "maxMismatchRatio": 0.01
+}

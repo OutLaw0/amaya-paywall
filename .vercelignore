@@ -1,0 +1,12 @@
+.env
+.env.*
+.git/
+.tools/
+.nuxt/
+.output/
+node_modules/
+test-results/
+playwright-report/
+design/
+tests/
+*.log

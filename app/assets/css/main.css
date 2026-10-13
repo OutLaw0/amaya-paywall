@@ -1,0 +1,94 @@
+@import '@fontsource/inter/cyrillic-400.css';
+@import '@fontsource/inter/cyrillic-500.css';
+@import '@fontsource/inter/cyrillic-600.css';
+@import '@fontsource/inter/cyrillic-700.css';
+@import '@fontsource/inter/latin-400.css';
+@import '@fontsource/inter/latin-500.css';
+@import '@fontsource/inter/latin-600.css';
+@import '@fontsource/inter/latin-700.css';
+
+:root {
+  color-scheme: light;
+  --color-bg: #faf8ff;
+  --color-text: #28213d;
+  --color-muted: #756c87;
+  --color-primary: #7954d3;
+  --color-selected: #f0eaff;
+  --color-border: #e5dff0;
+  --color-white: #fff;
+  --color-green: #37775b;
+  --radius-card: 20px;
+  --radius-button: 18px;
+  --spacing-card: 16px;
+  font-family: 'Inter', sans-serif;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-text-size-adjust: 100%;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+button, input { font: inherit; }
+button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
+button:disabled { cursor: default; }
+p, h1 { margin: 0; }
+button:focus-visible, .offer-card:focus-within { outline: 3px solid var(--color-primary); outline-offset: 4px; }
+
+.paywall {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100svh;
+  min-height: 100dvh;
+  margin-inline: auto;
+  padding: calc(24px + env(safe-area-inset-top, 0px)) calc(24px + env(safe-area-inset-right, 0px)) calc(24px + env(safe-area-inset-bottom, 0px)) calc(24px + env(safe-area-inset-left, 0px));
+}
+.brand { height: 24px; display: flex; align-items: center; justify-content: space-between; }
+.brand-name { width: 100px; font-size: 22px; line-height: 24px; font-weight: 700; color: var(--color-primary); }
+.brand-audience { font-size: 10px; line-height: 16px; font-weight: 600; color: var(--color-muted); text-align: right; }
+.world-art { height: 192px; margin-top: 16px; display: flex; align-items: center; justify-content: center; }
+.world-art img { display: block; flex: 0 0 auto; }
+.hero-title { margin-top: 16px; font-size: 30px; line-height: 36px; font-weight: 700; text-align: center; }
+.hero-title:focus { outline: none; }
+.hero-description { margin-top: 12px; min-height: 44px; font-size: 14px; line-height: 22px; color: var(--color-muted); text-align: center; white-space: pre-line; }
+.hero-description.has-error { color: #a63145; }
+.benefits { height: 24px; margin: 16px 0 24px; padding: 0; display: flex; justify-content: center; align-items: center; gap: 8px; list-style: none; color: var(--color-green); }
+.benefits li { width: 149px; font-size: 12px; line-height: 18px; font-weight: 500; text-align: center; }
+.offers { display: grid; gap: 12px; padding: 0; margin: 0; border: 0; min-width: 0; }
+.offer-card { display: flex; align-items: center; gap: 12px; height: 88px; padding: var(--spacing-card); border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-white); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.offer-card.is-selected { background: var(--color-selected); border: 2px solid var(--color-primary); }
+.offers:disabled .offer-card { cursor: default; }
+.offer-selection { flex: 0 0 24px; display: block; }
+.offer-details { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; }
+.offer-title { font-size: 16px; line-height: 24px; font-weight: 600; }
+.offer-caption { font-size: 12px; line-height: 18px; color: var(--color-muted); white-space: nowrap; }
+.offer-pricing { flex: 0 0 120px; margin-right: -2px; display: flex; flex-direction: column; text-align: right; }
+.is-selected .offer-pricing { margin-right: -4px; }
+.offer-price { font-size: 24px; line-height: 30px; font-weight: 700; letter-spacing: 1px; white-space: nowrap; }
+.offer-period { font-size: 12px; line-height: 18px; color: var(--color-muted); }
+.purchase-button { width: 100%; min-height: 56px; margin-top: 20px; padding: 16px 8px; border: 0; border-radius: var(--radius-button); background: var(--color-primary); color: var(--color-white); font-size: 16px; line-height: 24px; font-weight: 600; }
+.purchase-button.is-loading { opacity: 0.65; }
+.restore-button, .text-button { display: block; border: 0; background: transparent; color: var(--color-primary); font-size: 12px; line-height: 18px; font-weight: 500; min-height: 44px; padding: 13px 8px; }
+.restore-button { width: 100%; margin-top: 4px; }
+.demo-note { margin-top: 4px; font-size: 11px; line-height: 16px; text-align: center; color: var(--color-muted); }
+.success-panel, .offers-message { height: 188px; border-radius: var(--radius-card); background: var(--color-selected); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 16px; }
+.success-panel p { font-size: 20px; line-height: 30px; font-weight: 600; }
+.offers-message p { font-size: 14px; line-height: 22px; }
+.offers-loading { height: 188px; display: grid; gap: 12px; }
+.skeleton-card { height: 88px; border-radius: var(--radius-card); background: var(--color-selected); animation: pulse 1.4s ease-in-out infinite alternate; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@keyframes pulse { to { opacity: 0.4; } }
+@media (prefers-reduced-motion: reduce) { .skeleton-card { animation: none; } }
+@media (max-width: 374px) {
+  .world-art img { transform: scale(0.91); }
+  .offer-pricing { flex-basis: 101px; }
+  .offer-price { font-size: 22px; }
+  .offer-caption { font-size: 11px; }
+  .offer-card { gap: 10px; }
+}
+@media (min-width: 431px) {
+  body { background: #eee9f6; }
+  .paywall { background: var(--color-bg); }
+}
